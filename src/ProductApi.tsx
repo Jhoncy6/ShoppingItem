@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-
 export interface Product {
   id: number;
   title: string;
@@ -17,7 +16,7 @@ export function useProducts() {
   useEffect(() => {
     fetch('https://fakestoreapi.com/products')
       .then(res => {
-        if (!res.ok) throw new Error('Erro na requisição da API');
+        if (!res.ok) throw new Error('Erro ao conslutar a API');
         return res.json();
       })
       .then((data: Product[]) => {

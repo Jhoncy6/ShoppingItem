@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { toast } from "sonner"
-
 interface LoadingOrErrorProps {
   loading: boolean;
   error: string | null;

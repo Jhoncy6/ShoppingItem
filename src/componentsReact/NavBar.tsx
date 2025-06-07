@@ -2,14 +2,15 @@ import {
   NavigationMenu,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart as ShoppingCartIcon  } from "lucide-react";
 
 interface NavBarProps {
   title?: string[];
   logo: string;
+  onCartClick: () => void;
 }
 
-export function NavBar({ title, logo }: NavBarProps) {
+export function NavBar({ title, logo, onCartClick }: NavBarProps) {
   return (
     <nav className="inset-x-0 ">
       <div className="max-w-7xl mx-auto px-4">
@@ -35,7 +36,7 @@ export function NavBar({ title, logo }: NavBarProps) {
           </NavigationMenu>
 
           <div className="flex items-center">
-            <ShoppingCart className="w-6 h-6 cursor-pointer" />
+            <ShoppingCartIcon  className="w-6 h-6 cursor-pointer" onClick={onCartClick} />
           </div>
         </div>
       </div>
